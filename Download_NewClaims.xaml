@@ -250,7 +250,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey-Enter" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey:Enter" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b592a9dd-b9ac-4d90-aae4-9b8fe03cf016" InformativeScreenshot="39f80212f1d20033d81fa38c71e90567" Selector="&lt;wnd app='lf.exe' cls='#32770' title='Browse For Folder' /&gt;&lt;wnd ctrlid='14148' /&gt;">
                           <ui:Target.TimeoutMS>
