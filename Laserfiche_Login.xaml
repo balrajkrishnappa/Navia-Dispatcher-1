@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>680,3120</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>680,3296</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Laserfiche_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -91,20 +91,20 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Laserfiche_Login" sap:VirtualizedContainerService.HintSize="636,2935" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Laserfiche_Login" sap:VirtualizedContainerService.HintSize="636,2951" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="LaunchingLasefiche" sap:VirtualizedContainerService.HintSize="574,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Launching Laserfiche Application&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application:  Laserfiche" sap:VirtualizedContainerService.HintSize="574,2692" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OutUiElement="[io_UiElement]" ScopeGuid="aa868f71-12ec-4b74-8c57-70d840b88097" Version="V2">
+    <ui:LogMessage DisplayName="LaunchingLasefiche" sap:VirtualizedContainerService.HintSize="574,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Launching Laserfiche Application&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application:  Laserfiche" sap:VirtualizedContainerService.HintSize="574,2706" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OutUiElement="[io_UiElement]" ScopeGuid="aa868f71-12ec-4b74-8c57-70d840b88097" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="LaserficheLogin" sap:VirtualizedContainerService.HintSize="540,2401" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="LaserficheLogin" sap:VirtualizedContainerService.HintSize="540,2413" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Str_LaserficheUsername" />
               <Variable x:TypeArguments="ss:SecureString" Name="Str_LaserfichePassword" />
@@ -162,8 +162,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:GetRobotCredential>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Entering Credentials..&quot;]" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringUsername" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="478,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="aa868f71-12ec-4b74-8c57-70d840b88097" Text="[Str_LaserficheUsername]" Version="V3">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,94" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Entering Credentials..&quot;]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringUsername" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="478,219" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="aa868f71-12ec-4b74-8c57-70d840b88097" Text="[Str_LaserficheUsername]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="84, 42, 190, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Flexplan\SVCS_UIPath'" FullSelectorArgument="&lt;wnd ctrlid='206' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='206' /&gt;" Guid="c0643265-103a-4809-8d5c-6f94d6c47571" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMIAAAAYCAYAAACoRCJ4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK8SURBVHhe7ZeBsaUgDEWty4Io4lVhNTbzmrADlkTAEBK/b+Xv/l3vmckMoAkIuYDTtm0RBnu6QQgwWLIqhNfrBYM9zkwhAPAkIAQAEhACAAkIAYDEfSG8lzjPS3zn6m1uxHsvc5yXYSP5Nxg9/w/luhBowqcpTo2FuP4gIcQ1xCmsuZJQY2aRdPHfcZnnWPVDMYRPjWfF8rC+obQ1cfL8ibjcll1cZHyrL/AxnwnBmvDRC3Er3hpDTSQqiwSnOie1SnzRH50oOhHXQHUvloP1DbLNKxMkRO2rOfMHv8VYIVC57mwlcSiJxA7K76RnK/mFGOZjN9zz9Ii3J6aKl58vQfll1tS+16lfe3dtrlAp8fayEkiDH8tEzklBtnll5ujL/H4e5/HtcxLq2XyAa3wmhDzRh6UFqwupkkUvNj8TycZtIvH4SiLjKcq1h/3EYqsdVCY5iYLHqTOjxOKiEKAcv8KNZWF9g2zzylxNya99CTHmzv9kPsA1xp0IeUE6odTX9t2tORmaeCSkJAw+KdpFrvFKP9LvqzpByUH+R7Zk0ZIw8xgtP4suloEVS7bpsv5Gaie8Z14sQtfBJcYK4WwBcgJdFgI9lyeG108Xx7vitCfWGnJfjTgsP4s2Vkc3poRs88oSare+/6xMePHAKeOEwMnh3U9L4ohk0/HKkV7a1fN6ZdB+up7g686S2uVgrP7UePdTq01w/lkm37NYHb2oOHaJIf29WKq9uTLRszJO7e/FA6cMFEIul2OcjNuVQDgBc3LJd42FrffyZOWn8IoQuI+QfiDFT+Xxs1ko4mwpV7hqPPD2B7WPZWDOhW7P86DHnzG/Xz3T7eZ8gC+5LoTRfOuC2UkOgMd/KgTaMS/s2rfZT7uyax/2J/oGI/l7QgDgBwEhAJCAEABIuEKAwZ5mnRBgsCcbhACDbVv8BbZCIrAiuNFrAAAAAElFTkSuQmCC" InformativeScreenshot="9d19d6ad319445f753857d1786ea570e.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='lf.exe' cls='#32770' title='Login' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -174,7 +174,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringPassword" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="478,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="aa868f71-12ec-4b74-8c57-70d840b88097" SecureText="[Str_LaserfichePassword]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringPassword" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="478,219" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="aa868f71-12ec-4b74-8c57-70d840b88097" SecureText="[Str_LaserfichePassword]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="84, 73, 190, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='207' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='207' /&gt;" Guid="af2b298e-c5c4-455c-9b9e-f9527f5be39a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMIAAAAYCAYAAACoRCJ4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABySURBVHhe7dOxDYBQDEPBjM2mrJENPi4QDVDQkjvJkhd41d3LbPqEYJZdIdS2m43bYwgwiRAgPoVQVeeDfxEChBAghAAhBAghQAgBQggQQoAQAoQQIIQAIQSITyHAXwkBQggQryGYTdstBLPJE4JZ9zoAB6MDOyf1B1EAAAAASUVORK5CYII=" InformativeScreenshot="cdaab94afdd1bf35ec082852bcfb8720.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='lf.exe' cls='#32770' title='Login' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -185,7 +185,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey-Enter" sap:VirtualizedContainerService.HintSize="478,157" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey-Enter" sap:VirtualizedContainerService.HintSize="478,158" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9ee61b79-87cc-4beb-84bb-24b3de9820c4" InformativeScreenshot="5d9c638e120e71deb84739b7ded5a0cb" Selector="&lt;wnd app='lf.exe' cls='#32770' title='Login' /&gt;&lt;wnd ctrlid='207' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -206,25 +206,25 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[bool_LoginSuccess]" sap:VirtualizedContainerService.HintSize="478,582" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[bool_LoginSuccess]" sap:VirtualizedContainerService.HintSize="478,589" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,203" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Login Success&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,94" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Login Success&quot;]" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,203" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Login Failed, kindly check your credentials&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,94" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Login Failed, kindly check your credentials&quot;]" />
                 </Sequence>
               </If.Else>
             </If>
