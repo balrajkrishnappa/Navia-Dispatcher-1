@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="io_UiElement" Type="InOutArgument(ui:UiElement)" />
     <x:Property Name="out_Str_InputFileLocation" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Str_LaserficheDownloadFolder" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1054,3226</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1054,3202</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Download_NewClaims_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -97,13 +98,21 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Download_NewClaims" sap:VirtualizedContainerService.HintSize="636,3161" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Download_NewClaims" sap:VirtualizedContainerService.HintSize="636,3137" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset AssetName="InputFileLocation" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="574,314" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <Assign sap:VirtualizedContainerService.HintSize="574,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[out_Str_LaserficheDownloadFolder]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">NewClaims</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:GetRobotAsset AssetName="InputFileLocation" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="574,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.TimeoutMS>
         <InArgument x:TypeArguments="x:Int32" />
       </ui:GetRobotAsset.TimeoutMS>
@@ -139,7 +148,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a778221d-7e28-49d3-9e58-82acf67b9c97" InformativeScreenshot="69e2a4673efe0def7b5911ea37e58800" Selector="&lt;ctrl name='NewClaims' role='outline item' aastate='collapsed, focusable, selectable' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a778221d-7e28-49d3-9e58-82acf67b9c97" InformativeScreenshot="69e2a4673efe0def7b5911ea37e58800" Selector="[string.Format(&quot;&lt;ctrl name='{0}' role='outline item' aastate='collapsed, focusable, selectable' /&gt;&quot;, out_Str_LaserficheDownloadFolder)]">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -293,7 +302,7 @@
             </ui:InterruptibleWhile>
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,163" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,163" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -75,6 +75,7 @@
       <Variable x:TypeArguments="ui:UiElement" Name="io_UiElement" />
       <Variable x:TypeArguments="x:String" Name="io_ApplicationName" />
       <Variable x:TypeArguments="x:String" Name="Str_InputFileLocation" />
+      <Variable x:TypeArguments="x:String" Name="Str_LaserficheFolder" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -99,12 +100,18 @@
         <OutArgument x:TypeArguments="x:String" x:Key="out_Str_InputFileLocation">
           <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Str_InputFileLocation" />
         </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Str_LaserficheDownloadFolder">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Str_LaserficheFolder" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AddQueueItems.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AddQueueItems.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Str_InputFileLocation">
           <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_InputFileLocation" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Str_LaserficheFolderName">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_LaserficheFolder" />
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
