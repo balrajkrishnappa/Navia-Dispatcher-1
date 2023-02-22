@@ -122,7 +122,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:GetQueueItems>
-            <If Condition="[queueItem.Count&gt;0]" sap:VirtualizedContainerService.HintSize="412,376" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[queueItem.Count=0]" DisplayName="Condition for Queue Count - If" sap:VirtualizedContainerService.HintSize="412,376" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <ui:AddQueueItem ServiceBaseAddress="{x:Null}" DisplayName="Add Queue Item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="NaviaInputFilePath" Reference="[path.GetFileNameWithoutExtension(File.ToString)]">
                   <ui:AddQueueItem.ItemInformation>
