@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010" x:Class="Download_NewClaims" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Download_NewClaims" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_UiElement" Type="InOutArgument(ui:UiElement)" />
     <x:Property Name="out_Str_InputFileLocation" Type="OutArgument(x:String)" />
@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1054,3593</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>584,3426</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Download_NewClaims_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -103,7 +103,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Download_NewClaims" sap:VirtualizedContainerService.HintSize="594,3528" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Download_NewClaims" sap:VirtualizedContainerService.HintSize="594,3361" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="downloadLaserficher" />
       <Variable x:TypeArguments="x:String" Name="inputFolder" />
@@ -121,7 +121,7 @@
         <OutArgument x:TypeArguments="x:String">[downloadLaserficher]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <Assign sap:VirtualizedContainerService.HintSize="532,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="532,61" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_Str_LaserficheDownloadFolder]</OutArgument>
       </Assign.To>
@@ -129,7 +129,7 @@
         <InArgument x:TypeArguments="x:String">[downloadLaserficher]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:GetRobotAsset AssetName="InputFileLocation" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="532,314" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset AssetName="InputFileLocation" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="532,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.TimeoutMS>
         <InArgument x:TypeArguments="x:Int32" />
       </ui:GetRobotAsset.TimeoutMS>
@@ -145,13 +145,13 @@
         <OutArgument x:TypeArguments="x:String">[inputFolder]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: Laserfiche" sap:VirtualizedContainerService.HintSize="532,2525" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_UiElement]" OpenMode="Never" OutUiElement="[io_UiElement]" ScopeGuid="a2727c7d-817d-4080-bc23-0c58081b6350" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: Laserfiche" sap:VirtualizedContainerService.HintSize="574,3534" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_UiElement]" OpenMode="Never" OutUiElement="[io_UiElement]" ScopeGuid="a2727c7d-817d-4080-bc23-0c58081b6350" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="498,2388" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540,3319" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="bool_InputFolderExists" />
               <Variable x:TypeArguments="x:Boolean" Name="bool_FilesDownloading" />
@@ -163,7 +163,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'outline item  NewClaims'" sap:VirtualizedContainerService.HintSize="436,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_RIGHT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'outline item  NewClaims'" sap:VirtualizedContainerService.HintSize="478,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_RIGHT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -185,7 +185,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item'" sap:VirtualizedContainerService.HintSize="436,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item'" sap:VirtualizedContainerService.HintSize="478,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -207,7 +207,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'list item'" sap:VirtualizedContainerService.HintSize="436,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'list item'" sap:VirtualizedContainerService.HintSize="478,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f6ce23f-7c24-4456-b56b-892fb482795e" InformativeScreenshot="67afd891334939842319fdfb920ef125" Selector="&lt;wnd app='lf.exe' cls='#32770' title='Download Folder Contents' /&gt;&lt;wnd ctrlid='20288' /&gt;&lt;ctrl name='Electronic File' role='list item' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -219,7 +219,7 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="436,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="478,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -241,11 +241,11 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:FolderExistsX DisplayName="Folder Exists" Exists="[bool_InputFolderExists]" sap:VirtualizedContainerService.HintSize="436,133" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[out_Str_InputFileLocation.Replace(&quot;Date&quot;,now.ToString(&quot;MMddyyyy&quot;))]" />
-            <If Condition="[bool_InputFolderExists]" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="If_1">
+            <ui:FolderExistsX DisplayName="Folder Exists" Exists="[bool_InputFolderExists]" sap:VirtualizedContainerService.HintSize="478,133" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[out_Str_InputFileLocation.Replace(&quot;Date&quot;,now.ToString(&quot;MMddyyyy&quot;))]" />
+            <If Condition="[bool_InputFolderExists]" sap:VirtualizedContainerService.HintSize="478,568" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -253,14 +253,14 @@
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Folder Already exists for downloading the claims&quot;]" />
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="FolderDoesn'tExist" sap:VirtualizedContainerService.HintSize="496,313" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="FolderDoesn'tExist" sap:VirtualizedContainerService.HintSize="400,292" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_Str_InputFileLocation]</OutArgument>
                     </Assign.To>
@@ -268,20 +268,20 @@
                       <InArgument x:TypeArguments="x:String">[out_Str_InputFileLocation.Replace("Username",Environment.UserName).Replace("Date",now.ToString("MMddyyyy"))]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[out_Str_InputFileLocation]" />
+                  <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="338,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[out_Str_InputFileLocation]" />
                 </Sequence>
               </If.Else>
             </If>
-            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:03">
+            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="478,52" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:03">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Inserting the Folder Path - Action" sap:VirtualizedContainerService.HintSize="400,465" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Inserting the Folder Path - Action" sap:VirtualizedContainerService.HintSize="402,738" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into FolderPath" EmptyField="True" sap:VirtualizedContainerService.HintSize="512,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[out_Str_InputFileLocation]">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into FolderPath" EmptyField="True" sap:VirtualizedContainerService.HintSize="340,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[out_Str_InputFileLocation]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f9b9cb4c-0655-42e6-96be-a0b8ba12ec2c" InformativeScreenshot="afe337a4823bc29e9613afa4f6571c55" Selector="&lt;wnd app='lf.exe' cls='#32770' title='Browse For Folder' /&gt;&lt;wnd ctrlid='14148' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -293,7 +293,7 @@
                         </ui:Target>
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text into FolderPath" sap:VirtualizedContainerService.HintSize="512,87" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text into FolderPath" sap:VirtualizedContainerService.HintSize="340,87" sap2010:WorkflowViewState.IdRef="GetValue_1">
                       <ui:GetValue.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="45217e98-5b3f-43b5-974d-7c0c36ee042f" Selector="&lt;wnd app='lf.exe' cls='#32770' title='Browse For Folder' /&gt;&lt;wnd ctrlid='14148' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -308,7 +308,7 @@
                         <OutArgument x:TypeArguments="x:String">[folderFilePath]</OutArgument>
                       </ui:GetValue.Value>
                     </ui:GetValue>
-                    <If Condition="[out_Str_InputFileLocation.Trim = folderFilePath.Trim]" DisplayName="Condition for checking the file name - If" sap:VirtualizedContainerService.HintSize="512,52" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[out_Str_InputFileLocation.Trim = folderFilePath.Trim]" DisplayName="Condition for checking the file name - If" sap:VirtualizedContainerService.HintSize="340,52" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -316,7 +316,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Assign DisplayName="BoolFlag - Assign" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign DisplayName="BoolFlag - Assign" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[boolFlag]</OutArgument>
                           </Assign.To>
@@ -326,7 +326,7 @@
                         </Assign>
                       </If.Then>
                       <If.Else>
-                        <Assign DisplayName="BoolFlag - Assign" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign DisplayName="BoolFlag - Assign" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_4">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[boolFlag]</OutArgument>
                           </Assign.To>
@@ -351,7 +351,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:RetryScope>
-            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey:Enter" sap:VirtualizedContainerService.HintSize="436,157" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey:Enter" sap:VirtualizedContainerService.HintSize="478,157" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b592a9dd-b9ac-4d90-aae4-9b8fe03cf016" InformativeScreenshot="39f80212f1d20033d81fa38c71e90567" Selector="&lt;wnd app='lf.exe' cls='#32770' title='Browse For Folder' /&gt;&lt;wnd ctrlid='14148' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -363,11 +363,11 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:FolderExistsX DisplayName="Folder Exists" Exists="[bool_InputFolderExists]" sap:VirtualizedContainerService.HintSize="436,133" sap2010:WorkflowViewState.IdRef="FolderExistsX_2" Path="[out_Str_InputFileLocation+&quot;\&quot;+inputFolder]" />
-            <If Condition="[bool_InputFolderExists]" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="If_3">
+            <ui:FolderExistsX DisplayName="Folder Exists" Exists="[bool_InputFolderExists]" sap:VirtualizedContainerService.HintSize="478,133" sap2010:WorkflowViewState.IdRef="FolderExistsX_2" Path="[out_Str_InputFileLocation+&quot;\&quot;+inputFolder]" />
+            <If Condition="[bool_InputFolderExists]" sap:VirtualizedContainerService.HintSize="478,467" sap2010:WorkflowViewState.IdRef="If_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -386,7 +386,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:UiElementExists DisplayName="Element Exists" Exists="[bool_FilesDownloading]" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+            <ui:UiElementExists DisplayName="Element Exists" Exists="[bool_FilesDownloading]" sap:VirtualizedContainerService.HintSize="478,87" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dbcd1f5d-edea-4c53-8b6d-4453c620992f" Selector="&lt;wnd app='lf.exe' cls='#32770' title=' (*%)' /&gt;&lt;wnd ctrlid='*' title='Processing' aaname='Processing' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -398,7 +398,7 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[bool_FilesDownloading]" DisplayName="While" sap:VirtualizedContainerService.HintSize="436,647" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[bool_FilesDownloading]" DisplayName="While" sap:VirtualizedContainerService.HintSize="478,647" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="WaitForDownload" sap:VirtualizedContainerService.HintSize="400,481" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
@@ -411,9 +411,15 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AddQueueItems.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AddQueueItems.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Str_InputFileLocation">[out_Str_InputFileLocation]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Str_LaserficheFolderName">[out_Str_LaserficheDownloadFolder]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Str_NewFolderPath">[out_Str_InputFileLocation+"\"+inputFolder]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Str_InputFileLocation">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_Str_InputFileLocation" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Str_LaserficheFolderName">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_Str_LaserficheDownloadFolder" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Str_NewFolderPath">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_Str_InputFileLocation+&quot;\&quot;+inputFolder" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <Delay Duration="[Time_Delay]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
@@ -429,7 +435,7 @@
                 </Sequence>
               </ui:InterruptibleWhile.Body>
             </ui:InterruptibleWhile>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,163" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
