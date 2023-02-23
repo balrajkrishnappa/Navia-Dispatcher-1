@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,2202</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>713,1498</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AddQueueItems_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="29">
@@ -89,21 +89,21 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddQueueItems" sap:VirtualizedContainerService.HintSize="668,1937" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddQueueItems" sap:VirtualizedContainerService.HintSize="694,1433" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Directory.GetFiles(in_Str_InputFileLocation+&quot;\&quot;+in_Str_LaserficheFolderName).Count&gt;0]" DisplayName="While" sap:VirtualizedContainerService.HintSize="606,1826" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Directory.GetFiles(in_Str_InputFileLocation+&quot;\&quot;+in_Str_LaserficheFolderName).Count&gt;0]" DisplayName="While" sap:VirtualizedContainerService.HintSize="632,1322" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="570,1660" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="596,1156" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[in_Str_InputFileLocation+&quot;\&quot;+in_Str_LaserficheFolderName]" sap:VirtualizedContainerService.HintSize="508,1549" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="CreationDateOldFirst" SkipFolderWithoutPermission="False">
+          <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[in_Str_InputFileLocation+&quot;\&quot;+in_Str_LaserficheFolderName]" sap:VirtualizedContainerService.HintSize="534,1045" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="CreationDateOldFirst" SkipFolderWithoutPermission="False">
             <ui:ForEachFileX.Body>
               <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                 <ActivityAction.Argument1>
@@ -112,7 +112,7 @@
                 <ActivityAction.Argument2>
                   <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                 </ActivityAction.Argument2>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="474,1297" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="500,793" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="queueItem" />
                   </Sequence.Variables>
@@ -121,57 +121,89 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MoveFile DestinationResource="{x:Null}" PathResource="{x:Null}" ContinueOnError="True" Destination="[in_Str_NewFolderPath]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="412,159" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[File.ToString]" />
-                  <ui:GetQueueItems Priority="{x:Null}" DisplayName="Checking the queue item" FilterStrategy="Equals" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="412,52" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New, InProgress, Failed, Successful, Abandoned, Retried, Deleted" QueueName="NaviaInputFilePath" Reference="[path.GetFileNameWithoutExtension(File.ToString)]" Result="[queueItem]">
-                    <ui:GetQueueItems.Duration>
-                      <InArgument x:TypeArguments="s:Nullable(x:Int32)" />
-                    </ui:GetQueueItems.Duration>
-                    <ui:GetQueueItems.From>
-                      <InArgument x:TypeArguments="s:Nullable(s:DateTime)" />
-                    </ui:GetQueueItems.From>
-                    <ui:GetQueueItems.Skip>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:GetQueueItems.Skip>
-                    <ui:GetQueueItems.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:GetQueueItems.TimeoutMS>
-                    <ui:GetQueueItems.To>
-                      <InArgument x:TypeArguments="s:Nullable(s:DateTime)" />
-                    </ui:GetQueueItems.To>
-                    <ui:GetQueueItems.Top>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:GetQueueItems.Top>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:GetQueueItems>
-                  <If Condition="[queueItem.Count=0]" DisplayName="Condition for Queue Count - If" sap:VirtualizedContainerService.HintSize="412,895" sap2010:WorkflowViewState.IdRef="If_1">
-                    <If.Then>
-                      <ui:AddQueueItem ServiceBaseAddress="{x:Null}" DisplayName="Add Queue Item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="334,619" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="NaviaInputFilePath" Reference="[path.GetFileNameWithoutExtension(File.ToString)]">
-                        <ui:AddQueueItem.ItemInformation>
-                          <InArgument x:TypeArguments="x:String" x:Key="TargetFile">[in_Str_NewFolderPath+"\"+path.GetFileName(File.ToString)]</InArgument>
-                        </ui:AddQueueItem.ItemInformation>
-                        <ui:AddQueueItem.ItemInformationCollection>
-                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
-                        </ui:AddQueueItem.ItemInformationCollection>
-                        <ui:AddQueueItem.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:AddQueueItem.TimeoutMS>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,682" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch.Try>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,454" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MoveFile DestinationResource="{x:Null}" PathResource="{x:Null}" ContinueOnError="False" Destination="[in_Str_NewFolderPath]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="338,159" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[File.ToString]" />
+                        <ui:GetQueueItems Priority="{x:Null}" DisplayName="Checking the queue item" FilterStrategy="StartsWith" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New, InProgress, Failed, Successful, Abandoned, Retried, Deleted" QueueName="NaviaInputFilePath" Reference="[path.GetFileNameWithoutExtension(File.ToString)]" Result="[queueItem]">
+                          <ui:GetQueueItems.Duration>
+                            <InArgument x:TypeArguments="s:Nullable(x:Int32)" />
+                          </ui:GetQueueItems.Duration>
+                          <ui:GetQueueItems.From>
+                            <InArgument x:TypeArguments="s:Nullable(s:DateTime)" />
+                          </ui:GetQueueItems.From>
+                          <ui:GetQueueItems.Skip>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:GetQueueItems.Skip>
+                          <ui:GetQueueItems.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:GetQueueItems.TimeoutMS>
+                          <ui:GetQueueItems.To>
+                            <InArgument x:TypeArguments="s:Nullable(s:DateTime)" />
+                          </ui:GetQueueItems.To>
+                          <ui:GetQueueItems.Top>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:GetQueueItems.Top>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:GetQueueItems>
+                        <If Condition="[queueItem.Count=0]" DisplayName="Condition for Queue Count - If" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="If_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <ui:AddQueueItem ServiceBaseAddress="{x:Null}" DisplayName="Add Queue Item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="334,219" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="NaviaInputFilePath" Reference="[path.GetFileNameWithoutExtension(File.ToString)]">
+                              <ui:AddQueueItem.ItemInformation>
+                                <InArgument x:TypeArguments="x:String" x:Key="TargetFile">[in_Str_NewFolderPath+"\"+path.GetFileName(File.ToString)]</InArgument>
+                              </ui:AddQueueItem.ItemInformation>
+                              <ui:AddQueueItem.ItemInformationCollection>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+                              </ui:AddQueueItem.ItemInformationCollection>
+                              <ui:AddQueueItem.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:AddQueueItem.TimeoutMS>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:AddQueueItem>
+                          </If.Then>
+                          <If.Else>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Queue item already exists&quot;]" />
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                      </ui:AddQueueItem>
-                    </If.Then>
-                    <If.Else>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Queue item already exists&quot;]" />
-                    </If.Else>
-                  </If>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
                 </Sequence>
               </ActivityAction>
             </ui:ForEachFileX.Body>
