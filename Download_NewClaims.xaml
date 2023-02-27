@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010" x:Class="Download_NewClaims" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Download_NewClaims" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_UiElement" Type="InOutArgument(ui:UiElement)" />
     <x:Property Name="out_Str_InputFileLocation" Type="OutArgument(x:String)" />
@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>722,4399</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>722,5328</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Download_NewClaims_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -103,7 +103,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Download_NewClaims" sap:VirtualizedContainerService.HintSize="732,4334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Download_NewClaims" sap:VirtualizedContainerService.HintSize="732,5263" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="downloadLaserficher" />
       <Variable x:TypeArguments="x:String" Name="inputFolder" />
@@ -113,7 +113,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset AssetName="Laserfiche_DownloadFolderName" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="670,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset AssetName="Laserfiche_DownloadFolderName" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="670,314" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.TimeoutMS>
         <InArgument x:TypeArguments="x:Int32" />
       </ui:GetRobotAsset.TimeoutMS>
@@ -145,13 +145,13 @@
         <OutArgument x:TypeArguments="x:String">[inputFolder]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: Laserfiche" sap:VirtualizedContainerService.HintSize="670,3477" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_UiElement]" OpenMode="Never" OutUiElement="[io_UiElement]" ScopeGuid="a2727c7d-817d-4080-bc23-0c58081b6350" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: Laserfiche" sap:VirtualizedContainerService.HintSize="670,4260" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_UiElement]" OpenMode="Never" OutUiElement="[io_UiElement]" ScopeGuid="a2727c7d-817d-4080-bc23-0c58081b6350" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="636,3340" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="636,4123" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="bool_InputFolderExists" />
               <Variable x:TypeArguments="x:Boolean" Name="bool_FilesDownloading" />
@@ -272,28 +272,33 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="574,52" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:03">
+            <Assign sap:VirtualizedContainerService.HintSize="574,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_Str_InputFileLocation]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[out_Str_InputFileLocation.Replace("Username",Environment.UserName).Replace("Date",now.ToString("MMddyyyy"))]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="574,713" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:03">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Inserting the Folder Path - Action" sap:VirtualizedContainerService.HintSize="402,465" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Inserting the Folder Path - Action" sap:VirtualizedContainerService.HintSize="400,465" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into FolderPath" EmptyField="True" sap:VirtualizedContainerService.HintSize="340,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[out_Str_InputFileLocation]">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBetweenKeys="200" DisplayName="Type Into FolderPath" EmptyField="True" sap:VirtualizedContainerService.HintSize="338,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[out_Str_InputFileLocation.Replace(&quot;Username&quot;,Environment.UserName).Replace(&quot;Date&quot;,now.ToString(&quot;MMddyyyy&quot;))]">
                       <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f9b9cb4c-0655-42e6-96be-a0b8ba12ec2c" InformativeScreenshot="afe337a4823bc29e9613afa4f6571c55" Selector="&lt;wnd app='lf.exe' cls='#32770' title='Browse For Folder' /&gt;&lt;wnd ctrlid='14148' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f9b9cb4c-0655-42e6-96be-a0b8ba12ec2c" InformativeScreenshot="afe337a4823bc29e9613afa4f6571c55" Selector="&lt;wnd app='lf.exe' cls='#32770' title='Browse For Folder' /&gt;&lt;wnd ctrlid='14148' /&gt;" WaitForReady="COMPLETE">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
                         </ui:Target>
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text into FolderPath" sap:VirtualizedContainerService.HintSize="340,87" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text into FolderPath" sap:VirtualizedContainerService.HintSize="338,87" sap2010:WorkflowViewState.IdRef="GetValue_1">
                       <ui:GetValue.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="45217e98-5b3f-43b5-974d-7c0c36ee042f" Selector="&lt;wnd app='lf.exe' cls='#32770' title='Browse For Folder' /&gt;&lt;wnd ctrlid='14148' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -308,7 +313,7 @@
                         <OutArgument x:TypeArguments="x:String">[folderFilePath]</OutArgument>
                       </ui:GetValue.Value>
                     </ui:GetValue>
-                    <If Condition="[out_Str_InputFileLocation.Trim = folderFilePath.Trim]" DisplayName="Condition for checking the file name - If" sap:VirtualizedContainerService.HintSize="340,52" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[out_Str_InputFileLocation.Trim = folderFilePath.Trim]" DisplayName="Condition for checking the file name - If" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -346,7 +351,7 @@
               </ui:RetryScope.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
